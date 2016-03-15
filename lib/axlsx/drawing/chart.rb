@@ -182,7 +182,8 @@ module Axlsx
     # @param [String] str
     # @return [String]
     def to_xml_string(str = '')
-      str << '<?xml version="1.0" encoding="UTF-8"?>'
+      # str << '<?xml version="1.0" encoding="UTF-8"?>'
+      str << '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
       str << ('<c:chartSpace xmlns:c="' << XML_NS_C << '" xmlns:a="' << XML_NS_A << '" xmlns:r="' << XML_NS_R << '">')
       str << ('<c:date1904 val="' << Axlsx::Workbook.date1904.to_s << '"/>')
       str << ('<c:style val="' << style.to_s << '"/>')
@@ -219,9 +220,9 @@ module Axlsx
         str << '</c:spPr>'
       end
       str << '<c:printSettings>'
-      str << '<c:headerFooter/>'
+      # str << '<c:headerFooter/>'
       str << '<c:pageMargins b="1.0" l="0.75" r="0.75" t="1.0" header="0.5" footer="0.5"/>'
-      str << '<c:pageSetup/>'
+      # str << '<c:pageSetup/>'
       str << '</c:printSettings>'
       str << '</c:chartSpace>'
     end
