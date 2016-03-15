@@ -82,7 +82,7 @@ module Axlsx
           str << ('<a:srgbClr val="' << color << '"/>')
           str << '</a:solidFill>'
           str << '</a:ln>'
-          str << '<a:round/>'
+          # str << '<a:round/>'
           str << '</c:spPr>'
         end
 
